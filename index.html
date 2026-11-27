@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>校园跑步助手</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <header>
+    <h1>🏃 校园跑步助手</h1>
+    <p>赣南师范大学 · 个人运动记录</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>📍 校园地图</h2>
+      <div id="map"></div>
+      <p id="mapStatus">正在加载校园地图...</p>
+      <button id="locateBtn">定位我的当前位置</button>
+    </section>
+
+    <section class="card">
+      <h2>🏃 跑步记录</h2>
+      <div class="timer" id="timer">00:00:00</div>
+
+      <div class="stats">
+        <div class="stat">
+          <strong id="distance">0.00</strong>
+          <span>距离（公里）</span>
+        </div>
+        <div class="stat">
+          <strong id="pace">--</strong>
+          <span>平均配速</span>
+        </div>
+      </div>
+
+      <button id="startBtn">开始真实跑步记录</button>
+      <button id="stopBtn" disabled>结束并保存</button>
+    </section>
+
+    <section class="card">
+      <h2>📊 历史记录</h2>
+      <div id="history">暂无跑步记录</div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
